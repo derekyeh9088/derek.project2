@@ -1,0 +1,220 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body img.fixed-img {
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  z-index: -5;
+  background-size: contain;
+}
+body header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 10px 6px -6px #777;
+}
+body header section.logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2 1 420px;
+  align-items: center;
+}
+body header section.logo img.logo {
+  width: 6vw;
+  height: 6vw;
+}
+body header section.logo h1 {
+  font-size: 2.5rem;
+}
+body header nav {
+  flex: 5 1 700px;
+}
+body header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+body header nav li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  transition: all 0.5s;
+  margin-bottom: 1rem;
+}
+body header nav li a:hover {
+  color: rgba(152, 57, 255, 0.5);
+  border-bottom: 3px solid;
+}
+body header nav li a.active {
+  color: rgba(152, 57, 255, 0.5);
+  border-bottom: 3px solid;
+}
+body main section.background-img {
+  background-image: url("/image/日本櫻花.jpg");
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: -2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section.background-img div.filter {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 70vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+body main section.background-img h3 {
+  font-size: 2rem;
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+body main section.info-circle {
+  background-color: white;
+}
+body main section.info-circle h3 {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+body main section.info-circle div.circles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main section.info-circle div.circles div.circle {
+  flex: 0 1 250px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+body main section.info-circle div.circles div.circle img {
+  width: 70%;
+  border-radius: 50%;
+  padding: 0.3;
+}
+body main section.info-circle div.circles div.circle img:hover {
+  border: 5px solid rgba(152, 57, 255, 0.5);
+}
+body main section.info-circle div.circles div.circle p {
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+body main section.empty-filter {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+}
+body main section.empty-filter h3 {
+  font-size: 2rem;
+  color: white;
+  z-index: 2;
+}
+body main section.google-map {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body main section.google-map h3 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+body main section.google-map p {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.4rem;
+}
+body main section.google-map iframe {
+  padding: 0.4rem;
+  width: 100%;
+  height: 50vh;
+}
+body footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+}
+body footer section.logo img {
+  width: 20vw;
+  padding: 0.5rem;
+}
+body footer section.logo p {
+  font-size: 3rem;
+  color: white;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+body footer section.icon {
+  margin: 1rem;
+}
+body footer section.icon a {
+  padding: 1rem;
+  margin: 0.5rem;
+}
+body footer section.icon a img {
+  width: 3vw;
+}
+
+@media screen and (max-width: 760px) {
+  body header section.logo {
+    flex-direction: column;
+  }
+  body header section.logo img.logo {
+    width: 8vw;
+    height: 8vw;
+  }
+  body header nav ul {
+    flex-direction: column;
+  }
+  body header nav ul li {
+    padding: 0.5rem 0.25rem;
+  }
+  body footer section.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  body footer section.logo img {
+    width: 18vw;
+    height: 18vw;
+  }
+}/*# sourceMappingURL=style.css.map */
