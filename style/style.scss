@@ -1,0 +1,290 @@
+$themecolor: rgba(152, 57, 255, 0.5);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+body {
+    img.fixed-img {
+        position: fixed;
+        min-height: 100vh;
+        width: 100%;
+        z-index: -5;
+        background-size: contain;
+
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 10px 6px -6px #777;
+
+        section.logo {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 2 1 420px;
+            align-items: center;
+            // border: 5px solid aquamarine;
+
+            img.logo {
+
+                width: 6vw;
+                height: 6vw;
+            }
+
+            h1 {
+
+                font-size: 2.5rem;
+
+            }
+        }
+
+        nav {
+
+            // margin-right: 3rem;
+            flex: 5 1 700px;
+            // border: 5px solid red;
+
+            ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: black;
+                    transition: all 0.5s;
+                    margin-bottom: 1rem;
+
+                    &:hover {
+                        color: $themecolor;
+                        border-bottom: 3px solid;
+                    }
+                }
+
+                a.active {
+                    color: $themecolor;
+                    border-bottom: 3px solid;
+                }
+            }
+        }
+    }
+
+
+    main {
+        section.background-img {
+            background-image: url("/image/日本櫻花.jpg");
+            min-height: 70vh;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: -2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            div.filter {
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                min-height: 70vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            h3 {
+                font-size: 2rem;
+                color: white;
+                z-index: 1;
+                text-align: center;
+            }
+
+        }
+
+        section.info-circle {
+            background-color: white;
+
+            h3 {
+                padding: 1rem;
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            div.circles {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                div.circle {
+                    flex: 0 1 250px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: center;
+
+                    img {
+                        width: 70%;
+                        border-radius: 50%;
+                        padding: 0.3;
+
+                        &:hover {
+                            border: 5px solid $themecolor;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.25rem;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+
+        section.empty-filter {
+            width: 100%;
+            min-height: 70vh;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            align-items: center;
+            justify-content: center;
+
+            h3 {
+                font-size: 2rem;
+                color: white;
+                z-index: 2;
+            }
+        }
+
+        section.google-map {
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            h3 {
+                font-size: 2rem;
+                text-align: center;
+                padding: 0.4rem;
+            }
+
+            p {
+                font-size: 2rem;
+                text-align: center;
+                padding: 0.4rem;
+
+            }
+
+            iframe {
+                padding: 0.4rem;
+                width: 100%;
+                height: 50vh;
+            }
+        }
+
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+
+        section.logo {
+            img {
+                width: 20vw;
+                padding: 0.5rem;
+            }
+
+            p {
+                font-size: 3rem;
+                color: white;
+                padding-bottom: 0.5rem;
+                text-align: center;
+            }
+        }
+
+        section.icon {
+            margin: 1rem;
+
+            a {
+                padding: 1rem;
+                margin: 0.5rem;
+
+                img {
+                    width: 3vw;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width:760px) {
+    body {
+        header {
+            section.logo {
+                flex-direction: column;
+
+                img.logo {
+                    width: 8vw;
+                    height: 8vw;
+                }
+
+            }
+
+            nav {
+                ul {
+                    flex-direction: column;
+
+                    li {
+                        padding: 0.5rem 0.25rem;
+                    }
+
+
+                }
+            }
+        }
+
+        footer {
+            section.logo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 18vw;
+                    height: 18vw;
+                }
+            }
+        }
+    }
+}
